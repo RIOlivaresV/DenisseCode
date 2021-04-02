@@ -1,16 +1,62 @@
+/*
+|------------------------------------------
+|  Global
+|------------------------------------------
+*/
+body {
+  font-family: "Raleway", sans-serif;
+  color: #ffff;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.65;
+  background: black;
+}
+
+.bg-centre {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.container {
+  padding: 0 15px;
+}
+
+.is-relative {
+  position: relative;
+}
+.theme-wrap {
+  background-color: #000;
+}
+
+/*
+|------------------------------------------
+|  Header
+|------------------------------------------
+*/
+
+a {
+  text-decoration: none;
+}
+
 .header {
   background: #000;
   text-align: center;
   padding: 10px 0;
   text-align: left;
   padding-left: 2%;
+  display: flex;
 }
 
+.logo-den {
+  max-width: 200px;
+}
 .navbar {
   display: none;
+  width: 30vh;
   position: absolute;
+  font-size: 25px;
   background-color: #ffff00;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(248, 244, 244, 0.699);
   z-index: 1;
 }
 
@@ -23,6 +69,7 @@
 }
 
 .navbar a {
+  padding: 20%;
   color: #000;
   text-decoration: none;
   display: block;
@@ -33,22 +80,72 @@
   color: #ffff00;
 }
 
-.menu-img {
-  max-width: 3%;
+.title {
+  text-align: center;
+  width: 94%;
 }
 
 .menu:hover .navbar {
   display: block;
 }
 
-/* footer */
+.menu {
+  width: 5%;
+}
+
+/*
+|------------------------------------------
+|  Navigation
+|------------------------------------------
+*/
+.gn {
+  display: none;
+}
+
+/*
+|------------------------------------------
+|  Banner
+|------------------------------------------
+*/
+.hello img {
+  width: 100%;
+}
+.banner .intro {
+  color: #fff;
+  font-size: 15px;
+  padding: 5%;
+  font-style: italic;
+  text-align: right;
+}
+.banner .content h2 {
+  color: #ffff;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: overline;
+  line-height: 30px;
+  text-decoration-color: yellow;
+}
+.banner .content p {
+  font-size: 25px;
+  text-align: center;
+  padding: 0 25px;
+}
+
+/*
+|------------------------------------------
+Footer
+|------------------------------------------
+*/
 .footer_container {
   display: grid;
   grid-template-columns: auto auto;
+  padding: 15% auto;
 }
 
 .icons {
   max-width: 5%;
+  margin: 3% 0;
 }
 
 .networking {
@@ -61,9 +158,31 @@
 
 .contact {
   background-color: #000;
+  padding-right: 10%;
 }
 
 .contact img {
   margin: 1%;
   float: right;
+}
+
+/*
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|  Media Queries
+|------------------------------------------
+*/
+
+@media (max-width: 576px) {
+  .hello img {
+    content: url("/images/hello-576.jpg");
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
 }
