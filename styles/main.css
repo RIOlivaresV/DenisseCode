@@ -10,6 +10,7 @@ body {
   font-style: normal;
   line-height: 1.65;
   background: black;
+  align-content: center;
 }
 
 .bg-centre {
@@ -50,12 +51,17 @@ a {
 .logo-den {
   max-width: 200px;
 }
+/*
+|------------------------------------------
+|  Navigation
+|------------------------------------------
+*/
 .navbar {
   display: none;
-  width: 30vh;
+  width: 40vh;
   position: absolute;
   font-size: 25px;
-  background-color: #ffff00;
+  background-color: #ffff;
   box-shadow: 0px 8px 16px 0px rgba(248, 244, 244, 0.699);
   z-index: 1;
 }
@@ -93,43 +99,138 @@ a {
   width: 5%;
 }
 
-/*
-|------------------------------------------
-|  Navigation
-|------------------------------------------
-*/
 .gn {
   display: none;
 }
 
 /*
 |------------------------------------------
+|  DENOISE DENOISE DENOISE DENOISE DENOISE
+DENOISE DENOISE DENOISE DENOISE DENOISE DENOISE
+|------------------------------------------
+*/
+/*
+|------------------------------------------
 |  Banner
 |------------------------------------------
 */
+.banner {
+  display: flex;
+  flex-direction: column;
+}
 .hello img {
   width: 100%;
 }
-.banner .intro {
+.banner h1 {
   color: #fff;
-  font-size: 15px;
+  font-size: 35px;
   padding: 5%;
-  font-style: italic;
+  font-weight: 100;
   text-align: right;
+}
+.banner .content {
+  margin-top: 5%;
 }
 .banner .content h2 {
   color: #ffff;
-  font-size: 20px;
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
-  padding-top: 20px;
-  text-decoration: overline;
-  line-height: 30px;
-  text-decoration-color: yellow;
+  padding: 8% auto;
 }
 .banner .content p {
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
-  padding: 0 25px;
+  padding: 10px 25px;
+  color: #ffff;
+}
+/*
+|------------------------------------------
+Flip-cards
+|------------------------------------------/*
+*/
+
+.flip-card {
+  background-color: transparent;
+  display: flex;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 2%;
+}
+
+.design-thinking .flip-card {
+  background-color: transparent;
+  display: flex;
+  width: 400px;
+  height: 150px;
+  perspective: 1000px;
+  margin: 2%;
+}
+
+.flip-card-front img {
+  width: 400px;
+  height: 400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #ffff;
+  color: black;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #000;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  transform: rotateY(180deg);
+  padding: 25%;
+}
+
+.design-thinking .flip-card-back {
+  background-color: #000;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  transform: rotateY(180deg);
+  padding: 0%;
+}
+.flip-card-back p {
+  padding-top: 5%;
+}
+
+.credentials {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  padding: 3%;
 }
 
 /*
@@ -138,18 +239,28 @@ Footer
 |------------------------------------------
 */
 .footer_container {
-  display: grid;
+  display: inline-flex;
   grid-template-columns: auto auto;
-  padding: 15% auto;
+  margin: 1% 1%;
+  border-style: solid none none none;
+  border-color: #fff;
+  border-width: 1px;
+}
+
+.footer_center {
+  width: 30%;
+  text-align: center;
+  margin: 0.5% 0% 0% 0%;
 }
 
 .icons {
-  max-width: 5%;
-  margin: 3% 0;
+  max-width: 7%;
+  margin: 3% 1%;
 }
 
 .networking {
-  padding-left: 10%;
+  padding-left: 5%;
+  width: 50%;
 }
 
 .networking img {
@@ -157,8 +268,9 @@ Footer
 }
 
 .contact {
+  width: 50%;
   background-color: #000;
-  padding-right: 10%;
+  padding-right: 5%;
 }
 
 .contact img {
@@ -176,7 +288,7 @@ Footer
 
 @media (max-width: 576px) {
   .hello img {
-    content: url("/images/hello-576.jpg");
+    content: url("./images/hello-576.jpg");
   }
 }
 @media (max-width: 768px) {
@@ -185,4 +297,156 @@ Footer
 }
 
 @media (max-width: 1200px) {
+}
+/*
+|------------------------------------------
+| WORK WORK WORK WORK WORK WORK WORK WORK WORK WORK
+WORK WORK WORK WORK WORK WORK WORK WORK WORK WORK 
+WORK WORK WORK WORK WORK WORK WORK WORK WORK
+|------------------------------------------
+*/
+.work img {
+  width: 100%;
+}
+.design-thinking {
+  display: flex;
+  align-self: flex-end;
+  padding-bottom: 5%;
+  width: 100%;
+  justify-self: center;
+}
+h1 {
+  font-size: 45px;
+  color: #000;
+  font-weight: 800;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.overflow {
+  background: #ffff;
+  height: 400px;
+  margin: 0 auto;
+  overflow: scroll;
+  overflow-y: scroll;
+  max-width: 90%;
+}
+.images-overflow {
+  width: auto;
+  padding: 2%;
+  display: flex;
+  position: relative;
+  background-color: #000;
+}
+
+.images-overflow div {
+  text-align: center;
+}
+
+.images-overflow img {
+  width: 80%;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffff;
+  text-align: center;
+  padding-bottom: 2%;
+}
+.overflow h3 {
+  font-size: 30px;
+  color: #000;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 2%;
+}
+.overflow p {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin: auto 20%;
+}
+/*
+|------------------------------------------
+ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT 
+ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT
+ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT
+|------------------------------------------
+*/
+.banner-about h1 {
+  font-size: 45px;
+  font-weight: 100;
+  color: #ffff;
+  text-align: start;
+  padding-left: 3%;
+}
+.banner-about h2 {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 2% auto;
+}
+.description h3 {
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  margin: 2% 5%;
+}
+.about img {
+  width: 100%;
+}
+.about-banner {
+  display: flex;
+}
+.about-images {
+  max-width: 100%;
+}
+
+.description {
+  /* max-width: 50%; */
+}
+
+.about-grid div {
+  text-align: center;
+}
+
+.grid-img {
+  margin: 2%;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+}
+.description p {
+  text-align: justify;
+  font-size: 25px;
+  font-weight: 300;
+  color: #ffff;
+  margin: 3% 5%;
+  padding-right: 8%;
+}
+.overflow-experience li {
+  font-size: 25px;
+  color: #000;
+  margin: 1% 2%;
+  border: 1px solid #000;
+}
+/* .overflow-experience h4 {
+  font-size: 25px;
+  color: #000;
+  margin: 1% 2%;
+  text-align: center;
+} */
+/*
+|------------------------------------------
+CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT
+CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT
+CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT
+|------------------------------------------
+*/
+.contact-me h1 {
+  color: #ffff;
 }
